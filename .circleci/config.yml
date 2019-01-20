@@ -1,17 +1,13 @@
 version: 2
-
 jobs:
-  shellcheck:
+  test:
+    docker:
+      - image: circleci/perl:latest
     steps:
       - checkout
-      - run:
-          name: Check Scripts
-          command: |
-            echo "starting"
-            perl checkpatch.pl
-
+      - run: ls
 workflows:
   version: 2
-  workflow:
+  build_and_test:
     jobs:
-      - shellcheck
+      - test
