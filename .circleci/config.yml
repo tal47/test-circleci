@@ -9,8 +9,6 @@ jobs:
           name: Check Scripts
           command: |
             ls
-  build-job:
-    ...
 
 workflows:
   version: 2
