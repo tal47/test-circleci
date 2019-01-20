@@ -8,7 +8,7 @@ jobs:
       - run:
           name: Check Scripts
           command: |
-            ls
+            perl checkpatch.pl
 
 workflows:
   version: 2
